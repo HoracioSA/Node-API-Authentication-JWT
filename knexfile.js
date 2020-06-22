@@ -1,4 +1,10 @@
 // Update with your config settings.
+
+exports.down = function(knex) {
+  return knex.schema.dropTable('users')
+};
+
+
 require('dotenv').config();
 const { CLIENT, DATABASE, PG_USER, PASSWORD, HOST, PG_PORT } = process.env;
 module.exports = {
